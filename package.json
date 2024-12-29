@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "clean-dist": "check-dist.bat",
+    "build": "npm run clean-dist && cd ..\\talpms-frontend && npm run build && xcopy /E /I dist ..\\talpms-backend\\dist && cd ..\\talpms-backend"
   },
   "author": "",
   "license": "ISC",
